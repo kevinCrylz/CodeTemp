@@ -1,0 +1,19 @@
+SELECT COUNT(DISTINCT col1) AS col, MIN(col2), MAX(col3), SUM(col4), AVG(col5)
+    col1 + " " + col2 AS col
+FROM Table1 AS T1 INNER JOIN Table2 AS T2 ON T1.col = T2.col
+WHERE col1 = "" and col2 <> "" or col3 IS NOT NULL or col4 LIKE "a%_[^a-c]" 
+    or col5 NOT IN ("","",...) or col6 NOT BETWEEN "" AND ""
+GROUP BY col1
+HAVING COUNT(col) > 5
+ORDER BY col1 ASC, col2 DESC
+LIMIT n     // get first n records
+
+INSERT INTO Table (col1, col2, ...)
+VALUES (val1, val2, ...)
+
+UPDATE Table
+SET col1 = "", col2 = ""
+WHERE col1 = ""
+
+DELETE FROM Table
+WHERE col1 = ""

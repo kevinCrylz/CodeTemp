@@ -1,0 +1,28 @@
+ls -lt              // sorted long listing
+
+more file           // === readlines, downward scroll
+less file           // === reader, bidirection scroll
+    /[pattern]
+cat [file, file, ...]   // concatenate 
+
+head -10 file           // first 10 lines
+
+wc file             // lineCnt wordCnt charCnt fileName
+
+sort -u -k 2nr file     // sort by column 2 (number, reverse), set items
+cut -d ' ' -f 1-3,5 file    // get column 1-3, 5 with delimiter ' '
+uniq -c file            // output one for identical continuous items with count
+grep -n " " file        // find " " with line number in file
+     -v " " file        // line w/o " "
+
+diff file1 file2        //
+comm -1 -2 -3 file1 file2   // unique to first, unique to second, common to both,
+
+tar -cvf file           // file zip
+tar -xvf file           // unzip
+
+gzip                    // ~3.5x compression
+gunzip                  //
+
+bzip2
+bunzip2
